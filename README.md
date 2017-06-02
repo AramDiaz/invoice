@@ -73,13 +73,13 @@ Total de Peticiones: 9
   * Test a 1 petición.
   * Test al algoritmo completo.
 
-Ejecutando Test...
+ Ejecutando el test...
 
 ```bash
 $ mix test
 ```
 
-Output...
+  Output...
 
 ```bash
 ..
