@@ -23,7 +23,7 @@ defmodule InvoiceAPIImp do
   @doc """
     Request al servicio facturas
   """
-  defp getInvoice(id, start, finish) do
+  def getInvoice(id, start, finish) do
     InvoiceAPI.get("facturas",
         query: %{id: id, start: Date.to_iso8601(start), finish: Date.to_iso8601(finish)})
         .body["response"]
