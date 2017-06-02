@@ -1,10 +1,14 @@
 # INVOICE
 
-**TODO: Consulta el número de facturas de Api Invoice**
+  **TODO: Consulta el número de facturas de Api Invoice**
 
 ## Installation
 
-*1.-*
+  *1.-Instalar Elixir*
+
+  Instalar de acuerdo a la [documentación oficial](https://elixir-lang.org/install.html).
+
+  *2.-Clonar Repositorio*
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `invoice` to your list of dependencies in `mix.exs`:
