@@ -28,6 +28,8 @@ defmodule INVOICE.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:httpotion, "~> 3.0.2"},
+    {:jsx, git: "https://github.com/talentdeficit/jsx.git"},
+    {:calendar, "~> 0.17.2"}]
   end
 end
