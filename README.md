@@ -19,6 +19,8 @@ $ git clone git://github.com/AramDiaz/invoice.git invoice
 
 ### 3.-Instalamos las dependencias y compilamos
 
+  Instalación de dependencias...
+
 ```bash
 $ cd invoice
 $ mix deps.get
@@ -38,13 +40,13 @@ $ iex -S mix
 
   `INVOICE.main` no pide parametros simplemente lo ejecutamos, es posible ajustar los parametros en el codigo.
 
-```bash
+```elixir
 iex<1>> INVOICE.main
 ```
 
   Output...
 
-```bash
+```elixir
 Total de Facturas: 805
 Total de Peticiones: 24
 :ok
@@ -53,13 +55,13 @@ Total de Peticiones: 24
   `INVOICE.mainparms(date_start, date_finish)`.
   `date_start` y `date_finish` en formato YYYY-mm-dd
 
-```bash
+```elixir
 iex<1>> INVOICE.mainparms("2017-05-01","2017-05-15")
 ```
 
   Output...
 
-```bash
+```elixir
 Total de Facturas: 292
 Total de Peticiones: 9
 :ok
@@ -67,6 +69,26 @@ Total de Peticiones: 9
 
 ## Testing
 
+  El archivo `test/invoice_test.exs` contiene 2 scripts.
+  * Test a 1 petición.
+  * Test al algoritmo completo.
+
+### Ejecutando Test
+
+```bash
+$ mix test
+```
+
+Output...
+
+```bash
+..
+
+Finished in 3.5 seconds
+2 tests, 0 failures
+
+Randomized with seed 35000
+```
 
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
