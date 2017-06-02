@@ -23,6 +23,9 @@ defmodule QueryInvoices do
     si la consulta es mayor a 100 vuelve a dividir e itera,
     si es menor a 100 acomula el total de facturas,
     termina hasta que ya no es posible generar más rangos de fechas.
+    El numero de rangos generados depende de la condición de las 100 facturas,
+    asi mismo el numero de as peticiones depende de la información de la base de datos
+    que van en funcion para generar los rangos. se podria decir que son dinamicos.
   """
   defp divide_date(id, start, finish, data) when start != finish do
     diff = finish |> Calendar.Date.diff(start)
