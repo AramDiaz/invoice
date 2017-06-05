@@ -9,14 +9,15 @@ defmodule InvoiceAPI do
     Establece un URL base
   """
   def process_url(url) do
-    "http://74.208.222.55:3001/" <> url
+    "http://34.209.24.195/" <> url
   end
 
   @doc """
     Procesa Json response y lo convierte en un Enum Object
   """
   def process_response_body(body) do
-    body |> IO.iodata_to_binary |> :jsx.decode |> Enum.into(%{})
+    #body |> IO.iodata_to_binary |> :jsx.decode |> Enum.into(%{})
+    body |> IO.iodata_to_binary |> to_string
   end
 
 end
