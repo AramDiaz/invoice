@@ -38,7 +38,7 @@ $ mix compile
 $ iex -S mix
 ```
 
-  `INVOICE.main` no pide parametros simplemente lo ejecutamos, es posible ajustar los parametros en el codigo.
+  `INVOICE.main` no pide parametros simplemente lo ejecutamos, los parametros los tiene por default(start="2017-01-01", finish="2017-12-31"), es posible ajustar los parametros en el codigo.
 
 ```elixir
 iex<1>> INVOICE.main
@@ -47,8 +47,8 @@ iex<1>> INVOICE.main
   Output...
 
 ```elixir
-Total de Facturas: 805
-Total de Peticiones: 24
+Total de Facturas: 1695
+Total de Peticiones: 55
 :ok
 ```
 
@@ -56,22 +56,22 @@ Total de Peticiones: 24
   `date_start` y `date_finish` en formato YYYY-mm-dd
 
 ```elixir
-iex<1>> INVOICE.mainparms("2017-05-01","2017-05-15")
+iex<1>> INVOICE.mainparms("2017-01-01","2017-01-31")
 ```
 
   Output...
 
 ```elixir
-Total de Facturas: 292
-Total de Peticiones: 9
+Total de Facturas: 144
+Total de Peticiones: 3
 :ok
 ```
 
 ## Testing
 
   El archivo `test/invoice_test.exs` contiene 2 scripts.
-  * Test a 1 petición.
-  * Test al algoritmo completo.
+  * Test a una sola petición.(parámetros por default, start="2017-01-01", finish="2017-01-31")
+  * Test al algoritmo completo.(parámetros por default, start="2017-01-01", finish="2017-12-31")
 
  Ejecutando el test...
 
@@ -84,10 +84,10 @@ $ mix test
 ```bash
 ..
 
-Finished in 3.5 seconds
+Finished in 13.3 seconds
 2 tests, 0 failures
 
-Randomized with seed 35000
+Randomized with seed 447000
 ```
 
 ## ¡¡¡ Gracias !!!
